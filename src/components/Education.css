@@ -1,0 +1,194 @@
+.education-section {
+  background-color: var(--bg-primary);
+}
+
+.education-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-card {
+  padding: 40px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.education-card-glow {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  filter: blur(80px);
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.education-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.edu-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-sm);
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent-indigo);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.edu-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.edu-title-group {
+  flex-grow: 1;
+}
+
+.edu-badge {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-indigo);
+  border-color: rgba(99, 102, 241, 0.3);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.edu-degree {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.edu-college {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.edu-university {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.edu-score-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.edu-score-box {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 12px 24px;
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+}
+
+.edu-score-val {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-emerald);
+  line-height: 1;
+  display: block;
+}
+
+.edu-score-scale {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.edu-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 32px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.edu-body {
+  position: relative;
+  z-index: 2;
+}
+
+.edu-body-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.edu-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.edu-subject-tag {
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 50px;
+  transition: var(--transition-fast);
+}
+
+.edu-subject-tag:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 24px;
+  }
+  .edu-degree {
+    font-size: 1.4rem;
+  }
+  .edu-college {
+    font-size: 1rem;
+  }
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .edu-score-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .edu-score-box {
+    width: 100%;
+    padding: 10px;
+  }
+  .edu-score-val {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 1.8rem;
+  }
+}

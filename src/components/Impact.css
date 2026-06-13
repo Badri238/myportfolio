@@ -1,0 +1,214 @@
+.impact-section {
+  background-color: var(--bg-secondary);
+}
+
+.impact-intro {
+  max-width: 700px;
+  margin: -20px auto 60px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.metric-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.metric-card-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+}
+
+.metric-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 8px;
+  border-radius: var(--border-radius-sm);
+  box-content: content-box;
+}
+
+.metric-card:hover .metric-icon {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--text-primary);
+}
+
+.metric-card-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.metric-card-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.metric-card-value {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+/* Active card highlight state */
+.metric-card.active {
+  border-color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.05);
+  box-shadow: var(--shadow-sm), 0 0 15px rgba(16, 185, 129, 0.1);
+  transform: translateX(6px);
+}
+
+.metric-card.active .metric-card-value {
+  color: var(--accent-emerald);
+}
+
+.metric-card.active .metric-icon {
+  background: var(--gradient-emerald);
+  color: #041e15;
+}
+
+/* Detail View Pane */
+.metric-detail-pane {
+  padding: 36px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.detail-pane-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.detail-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+}
+
+.detail-pane-header h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.detail-large-value {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.value-num {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent-emerald);
+  line-height: 1;
+}
+
+.value-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.detail-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.detail-short {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.detail-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin-bottom: 24px;
+}
+
+.detail-header-small {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.detail-full {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Responsive CSS */
+@media (max-width: 992px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .metric-card.active {
+    transform: none;
+  }
+  .metric-detail-pane {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .metric-card {
+    padding: 16px;
+  }
+  .metric-card-value {
+    font-size: 1.8rem;
+  }
+  .value-num {
+    font-size: 3rem;
+  }
+  .value-label {
+    font-size: 1.2rem;
+  }
+  .metric-card-left {
+    gap: 12px;
+  }
+}
