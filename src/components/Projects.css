@@ -292,3 +292,250 @@
     padding: 12px 0;
   }
 }
+
+/* Category Dividers */
+.project-section-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.divider-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-emerald);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.project-section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.personal-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald);
+  border-color: rgba(16, 185, 129, 0.3);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Gym Simulator Styling */
+.gym-simulator {
+  background: rgba(2, 6, 23, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.simulator-header {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.sim-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sim-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444; /* red pulse for active session */
+}
+
+.sim-timer {
+  color: var(--accent-cyan);
+}
+
+.simulator-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.exercise-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exercise-goal {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: 16px;
+}
+
+.sets-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.table-header-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.table-row.completed {
+  opacity: 0.5;
+  background: rgba(16, 185, 129, 0.02);
+}
+
+.set-num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.table-row.completed .set-num {
+  color: var(--accent-emerald);
+}
+
+.set-prev {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.set-input-val {
+  font-weight: 600;
+}
+
+.set-check-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.set-checkbox-btn {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: rgba(2, 6, 23, 0.5);
+  color: #041e15;
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.set-checkbox-btn:hover {
+  border-color: var(--accent-emerald);
+}
+
+.set-checkbox-btn.checked {
+  background: var(--gradient-emerald);
+  border-color: var(--accent-emerald);
+  color: #041e15;
+}
+
+.delete-set-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  opacity: 0.6;
+}
+
+.delete-set-btn:hover {
+  opacity: 1;
+}
+
+/* Simulator Form */
+.simulator-add-set-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  flex-wrap: wrap;
+}
+
+.simulator-add-set-form .input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(2, 6, 23, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0 8px;
+  width: 90px;
+  flex-grow: 1;
+}
+
+.simulator-add-set-form input {
+  background: transparent !important;
+  border: none !important;
+  color: var(--text-primary);
+  width: 100%;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+/* remove spinner counters */
+.simulator-add-set-form input::-webkit-outer-spin-button,
+.simulator-add-set-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.add-set-btn-submit {
+  padding: 8px 12px !important;
+  font-size: 0.8rem !important;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
